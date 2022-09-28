@@ -28,8 +28,8 @@ export class AppComponent implements OnInit {
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {
-    //this.getPage(0, true, 'USD');
-    //this.getPage(0, true, 'EUR');
+    this.getPage(0, true, 'USD');
+    this.getPage(0, true, 'EUR');
   }
 
   getPage(page, refresh?: boolean, base?: string) {
@@ -42,6 +42,6 @@ export class AppComponent implements OnInit {
   }
 
   refresh(base) {
-    //this.getPage(0, true, base);
+    this.getPage(0, true, base);
   }
 }

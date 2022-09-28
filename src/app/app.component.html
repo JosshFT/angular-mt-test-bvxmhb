@@ -2,7 +2,7 @@
   <div class="row justify-content-md-center">
     <div class="col col-md-auto">
       <span> USD Date: {{ rates['USD'].date }} </span>
-      <rates-table class="table" [rows]="rates['USD'].currencies"></rates-table>
+      <rates-table [rows]="rates['USD'].currencies"></rates-table>
       <paginator
         [totalCount]="rates['USD'].totalCount"
         [page]="rates['USD'].currentPage"
@@ -12,7 +12,7 @@
     </div>
     <div class="col col-md-auto">
       <span> EUR Date: {{ rates['EUR'].date }} </span>
-      <rates-table class="table" [rows]="rates['EUR'].currencies"></rates-table>
+      <rates-table [rows]="rates['EUR'].currencies"></rates-table>
       <paginator
         [totalCount]="rates['EUR'].totalCount"
         [page]="rates['EUR'].currentPage"
