@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-md-auto">
+      <span> USD Date: {{ rates['USD'].date }} </span>
+      <rates-table class="table" [rows]="rates['USD'].currencies"></rates-table>
+      <paginator
+        [totalCount]="rates['USD'].totalCount"
+        [page]="rates['USD'].currentPage"
+        (pageChange)="getPage($event, false, 'USD')"
+      ></paginator>
+      <button class="btn refresh" (click)="refresh('USD')">Refresh</button>
+    </div>
+    <div class="col col-md-auto">
+      <span> EUR Date: {{ rates['EUR'].date }} </span>
+      <rates-table class="table" [rows]="rates['EUR'].currencies"></rates-table>
+      <paginator
+        [totalCount]="rates['EUR'].totalCount"
+        [page]="rates['EUR'].currentPage"
+        (pageChange)="getPage($event, false, 'EUR')"
+      ></paginator>
+      <button class="btn refresh" (click)="refresh('EUR')">Refresh</button>
+    </div>
+  </div>
+</div>
